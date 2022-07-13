@@ -1,5 +1,5 @@
 /*
- * Copyright(c) 2020 Risto Lahtela (AuroraLS3)
+ * Copyright(c) 2020 AuroraLS3
  *
  * The MIT License(MIT)
  *
@@ -20,11 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.djrapitops.extension;
+package net.playeranalytics.extension.factionsuuid;
 
 import com.djrapitops.plan.extension.DataExtension;
 import com.djrapitops.plan.extension.FormatType;
 import com.djrapitops.plan.extension.Group;
+import com.djrapitops.plan.extension.NotReadyException;
 import com.djrapitops.plan.extension.annotation.*;
 import com.djrapitops.plan.extension.icon.Color;
 import com.djrapitops.plan.extension.icon.Family;
@@ -36,7 +37,6 @@ import com.massivecraft.factions.integration.Econ;
 import com.massivecraft.factions.perms.Relation;
 import com.massivecraft.factions.perms.Role;
 import com.massivecraft.factions.util.TL;
-import com.djrapitops.plan.extension.NotReadyException;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
