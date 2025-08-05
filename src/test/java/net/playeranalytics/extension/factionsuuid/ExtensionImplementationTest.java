@@ -39,7 +39,7 @@ class ExtensionImplementationTest {
 
     @BeforeEach
     void prepareExtractor() {
-        DataExtension extension = new FactionsUUIDExtension();
+        DataExtension extension = new FactionsUUIDExtension(new FactionsUUIDExtProviderLegacy());
         extractor = new ExtensionExtractor(extension);
     }
 

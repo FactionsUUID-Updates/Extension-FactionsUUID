@@ -27,7 +27,7 @@ import com.djrapitops.plan.extension.Caller;
 
 public class FactionsUUIDListenerFactory {
 
-    static FactionsUUIDListener createListener(Caller caller) {
-        return new FactionsUUIDListener(caller);
+    static FactionsUUIDListenerLegacy createLegacyListener(Caller caller) {
+        return new FactionsUUIDListenerLegacy(caller);
     }
 }

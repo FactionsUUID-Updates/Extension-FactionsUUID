@@ -42,11 +42,11 @@ import java.util.UUID;
  *
  * @author Vankka
  */
-public class FactionsUUIDListener implements Listener {
+public class FactionsUUIDListenerLegacy implements Listener {
 
     private final Caller caller;
 
-    public FactionsUUIDListener(Caller caller) {
+    public FactionsUUIDListenerLegacy(Caller caller) {
         this.caller = caller;
     }
 

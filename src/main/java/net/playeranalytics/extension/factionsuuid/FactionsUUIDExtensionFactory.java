@@ -34,7 +34,7 @@ import java.util.Optional;
  */
 public class FactionsUUIDExtensionFactory {
 
-    private boolean isAvailable() {
+    private boolean isLegacyFUUID() {
         try {
             // Factions v2+ uses some of the same classes as FUUID (v1)
             // this is one that is only on FUUID
@@ -46,14 +46,16 @@ public class FactionsUUIDExtensionFactory {
     }
 
     public Optional<DataExtension> createExtension() {
-        if (isAvailable()) {
-            return Optional.of(new FactionsUUIDExtension());
+        if (isLegacyFUUID()) {
+            return Optional.of(new FactionsUUIDExtension(new FactionsUUIDExtProviderLegacy()));
         }
         return Optional.empty();
     }
 
     public void registerExpansion(Caller caller) {
-        FactionsUUIDListener listener = FactionsUUIDListenerFactory.createListener(caller);
-        listener.register(caller);
+        if (isLegacyFUUID()) {
+            FactionsUUIDListenerLegacy listener = FactionsUUIDListenerFactory.createLegacyListener(caller);
+            listener.register(caller);
+        }
     }
 }
